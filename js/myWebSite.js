@@ -18,7 +18,7 @@ myWebSite.controller('homeController', ['$scope', '$http', function($scope, $htt
 myWebSite.controller('listController', ['$scope', '$http', function($scope, $http) {
 
 	// Initialising Items list
-	$scope.items = [];
+	$scope.items = [];	// Initialising Items list
 	
 	// Initialising Purchased Items list
 	$scope.purchasedItems = [];
