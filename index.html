@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="myWebSite">
+  <head>
+    <title>Gherosn employees</title>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    	
+    	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600italic,600,700italic,700' rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" type="text/css" href="css/style.css">
+    	
+    	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.2/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.2/angular-route.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.1.5/angular-local-storage.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+		<script src="js/myWebSite.js"></script>
+		<script src="js/directives/angular.editInPlace.js"></script>
+		<script src="js/directives/angular.ngEnter.js"></script>
+  </head>
+  <body>
+  	
+  	<section>
+  		<div data-ng-view></div>
+  	</section>
+  	
+  	<footer>
+  	<p id="by">Created by Deniss Baronov</p>
+  	</footer>
+  </body>
+</html>
+
+<!-- 
+	Tutorials
+	http://www.phpro.org/tutorials/Consume-Json-Results-From-PHP-MySQL-API-With-Angularjs-And-PDO.html
+	http://www.9lessons.info/2013/09/angularjs-tutorial-two-way-data-binding.html
+	http://www.angularcode.com/demo-of-a-simple-crud-restful-php-service-used-with-angularjs-and-mysql/
+-->

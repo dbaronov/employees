@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Shopping list page</title>
+  </head>
+  <body ng-controller="listController">
+  
+	<h1>My Shopping list [ {{items.length}} ]</h1>
+
+	<p>Please use this AngularJS App to create you shopping list. You can mark an item as purchased, click to edit or delete if needed.</p>
+	<br/>
+
+	<div>
+		<ul class="shoppingList">
+			<li ng-repeat="item in items track by $index">
+				<input type="checkbox" class="itemCheckbox" ng-model="item.isDone">
+				<label class="itemCheckboxlabel"></label>
+				<edit-in-place ng-class="(item.isDone ? 'strike' : '')" value="item.itemName"></edit-in-place>
+				<button type="button" class="close pull-right" aria-hidden="true" ng-click="deleteItem($index)">&times;</button>
+			</li>
+		</ul>
+	
+		<input ng-enter type="text" ng-model="newItem">
+		<button type="button" class="btn addBtn" ng-click="addItem()">Add</button>
+	
+	</div>
+	
+	<div class="debug">
+		<h5>Debugging</h5>
+		<p class="text-info">{{ items | json }}</p>
+		<p class="text-info">{{ purchased | json }}</p>
+	</div>
+  
+  </body>
+</html>

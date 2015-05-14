@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>List page</title>
+  </head>
+  <body>
+  
+<h1>List of employees [ {{employees.length}} ]</h1>
+
+<p>Please use this AngularJS App to search for employees contact details. You can search by name, extension or role/dept.</p>
+<br/>
+
+<input type="text" id="searchField" data-ng-model="qstring" placeholder="filter employees..." />
+<input type="submit" id="resetBtn" class="success" value="clear" ng-click="qstring = null"/>
+
+<br />
+<br />
+
+<table ng-controller="homeController">
+<tr>
+<th><strong>Name</strong></th>
+<th>Extension</th>
+<th>Role / Dept</th>
+<th>Email</th>
+</tr>
+
+<tr data-ng-repeat="employee in employees | filter:qstring | orderBy:'name'">
+<td><strong>{{ employee.name }}</strong></td>
+<td align="center">{{ employee.phone }}</td>
+<td>{{ employee.role }}</a></td>
+<td><a href="mailto:{{ employee.email }}"> {{ employee.email }}</a></td>
+</tr>
+</table>
+  
+  </body>
+</html>
+
+<!-- High33heels -->
